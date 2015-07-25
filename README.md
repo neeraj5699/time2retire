@@ -50,7 +50,7 @@ time2retire contains 18 sliders controlling the values:
   monthly.withdrawals capital withdrawals, dollars per month 
 
 
-DISCLAIMER:  I did not write the original app.  The idea and original code is by Pierre Chretien, updated by Michael Kapler and Lin Crampton.  I expanded their concept of using matrices populated with random numbers to generate multiple simulations comprising capital inputs/outputs, and random fluctuations in inflation, interest, etc.   
+DISCLAIMER:  I did not write the original app.  The idea and original code is by Pierre Chretien, updated by Michael Kapler.  I expanded their concept of using matrices populated with random numbers to generate multiple simulations comprising capital inputs/outputs, and random fluctuations in inflation, interest, etc.   
 DISCLAIMER:  I am not a financial planner, financial adivsor, or financial wizard.  Do not make financial decisions based on the information provided by this app.
 
 
