@@ -67,3 +67,41 @@ Option 2: Download the `server.R` and `ui.R` files and place them in a directory
 library(shiny)
 runApp('time2retire')
 ```
+
+### 4. Shiny Presentation
+
+This R Markdown presentation is made interactive using Shiny. The viewers of the presentation can change the assumptions underlying what's presented and see the results immediately. 
+
+To learn more, see [Interative Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+
+### 5. Slide with Interactive Plot
+
+```{r, echo=FALSE}
+inputPanel(
+  selectInput("n_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50), selected = 20),
+  
+  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+              min = 0.2, max = 2, value = 1, step = 0.2)
+)
+
+renderPlot({
+  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
+       xlab = "Duration (minutes)", main = "Geyser eruption duration")
+  
+  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
+  lines(dens, col = "blue")
+})
+```
+
+### 6. Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+### 7. Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
