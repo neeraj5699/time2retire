@@ -2,7 +2,8 @@ library(shiny)
 #
 # Idea and original code by Pierre Chretien
 # Small updates by Michael Kapler 
-# More mods by Lin Crampton
+# Some mods by Lin Crampton
+# More mods by Neeraj Kumar
 #
 
 shinyServer(function(input, output) {
@@ -104,7 +105,7 @@ shinyServer(function(input, output) {
 	Retirement=cbind(ageVecYears,Retirement)
 	#output$documentationText = renderText({"Adjust the slider bars to reflect the retirement scenario you wish to simulate."})
 	output$documentationText = renderText({'... projecting retirement assets over time ...\n'})
-	output$sourceText = renderText({"Idea and original code by Pierre Chretien, updated by Michael Kapler, and then Lin Crampton. Source at https://github.com/lincrampton/time2retire. Comments/complaints to lin.crampton@gmail.com"})
+	output$sourceText = renderText({"Idea and original code by Pierre Chretien, updated by Michael Kapler then Lin Crampton then Neeraj Kumar. Source at https://github.com/neeraj5699/time2retire. Comments/complaints to neerajk.bit@gmail.com"})
 	return(Retirement)
   })
   
